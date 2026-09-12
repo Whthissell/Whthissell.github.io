@@ -11,7 +11,7 @@ description: >-
 # TODO: set these before deploying.
 #   - If this repo is named "<your-username>.github.io": url = "https://<your-username>.github.io", baseurl = ""
 #   - If this repo has any other name (a project site):    url = "https://<your-username>.github.io", baseurl = "/<repo-name>"
-url: "https://your-username.github.io"
+url: "https://whthissell.github.io"
 baseurl: ""
 
 author:
@@ -19,7 +19,7 @@ author:
   email: whthissell@gmail.com
 
 # TODO: your GitHub handle (used for the header/footer GitHub link)
-github_username: your-username
+github_username: Whthissell
 # TODO: optional — add if you want a LinkedIn link in the footer
 linkedin_username: ""
 
