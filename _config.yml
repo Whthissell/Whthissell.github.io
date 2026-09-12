@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Site settings — update the TODOs below before your first deploy
+# ---------------------------------------------------------------------------
+title: William Thissell
+tagline: "Aerospace Engineering @ UVA — engineering, applied AI, and strategy"
+description: >-
+  Engineering portfolio of William Thissell, an Aerospace Engineering student
+  at the University of Virginia, showcasing hands-on projects in aerospace
+  design, autonomous systems, and applied AI/finance.
+
+# TODO: set these before deploying.
+#   - If this repo is named "<your-username>.github.io": url = "https://<your-username>.github.io", baseurl = ""
+#   - If this repo has any other name (a project site):    url = "https://<your-username>.github.io", baseurl = "/<repo-name>"
+url: "https://your-username.github.io"
+baseurl: ""
+
+author:
+  name: William Thissell
+  email: whthissell@gmail.com
+
+# TODO: your GitHub handle (used for the header/footer GitHub link)
+github_username: your-username
+# TODO: optional — add if you want a LinkedIn link in the footer
+linkedin_username: ""
+
+nav:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /#projects
+  - title: About
+    url: /about/
+  - title: Resume
+    url: /resume/
+
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - ".github"

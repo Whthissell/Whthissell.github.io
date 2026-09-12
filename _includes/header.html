@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+    <nav class="site-header__nav">
+      {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+      {% if site.github_username and site.github_username != "your-username" %}
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub ↗</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="wrap project">
+  <a class="back-link" href="{{ '/' | relative_url }}#projects">&larr; All projects</a>
+
+  <header class="project__header">
+    <h1 class="project__title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="project__subtitle">{{ page.subtitle }}</p>{% endif %}
+
+    <dl class="project__meta">
+      {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+      {% if page.team_size %}<div><dt>Team</dt><dd>{{ page.team_size }}</dd></div>{% endif %}
+      {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
+    </dl>
+
+    {% if page.tech %}
+      <ul class="tag-list">
+        {% for t in page.tech %}<li class="tag">{{ t }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+
+    <p class="project__links">
+      {% if page.repo_url and page.repo_url != "" %}<a href="{{ page.repo_url }}" target="_blank" rel="noopener">Code repository ↗</a>{% endif %}
+      {% if page.demo_url and page.demo_url != "" %}<a href="{{ page.demo_url }}" target="_blank" rel="noopener">Live demo / video ↗</a>{% endif %}
+    </p>
+  </header>
+
+  <div class="project__body">
+    {{ content }}
+  </div>
+</article>

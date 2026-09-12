@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap">
+    <p class="hero__eyebrow">{{ site.tagline }}</p>
+    <h1 class="hero__title">Hi, I'm {{ site.author.name }}.</h1>
+    <div class="hero__intro">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <div class="wrap">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+      {% assign sorted_projects = site.projects | sort: 'order' %}
+      {% for project in sorted_projects %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
