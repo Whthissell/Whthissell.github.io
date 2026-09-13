@@ -9,10 +9,9 @@ completing my degree on an accelerated three-year track. I excel at working thro
 long, challenging, quantitative problems, and I'm always willing to get hands-on with a
 project of my own to see it through to a final product.
 
-Alongside my engineering coursework and projects, I've been pursuing consulting, which
-brings a different way of thinking — a more structured, strategic approach to problem
-solving that complements the technical depth of my engineering work (see
-[Projects](/#projects)).
+Alongside my engineering coursework and projects, I have been pursuing consulting,
+which presents a different way of thinking with a more structured approach to problem
+solving (see [Projects](/#projects)).
 
 ## Interests
 
