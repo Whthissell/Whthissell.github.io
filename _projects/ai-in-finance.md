@@ -1,10 +1,9 @@
 ---
-title: "Applied AI in Finance"
-subtitle: "Summer project applying AI/ML methods to a finance problem"
-role: ""
-team_size: ""
-status: "Summer project"
-tech: ["Python", "Machine Learning", "Finance"]
+title: "Algorithmic Futures Market Trading System"
+subtitle: "A statistically rigorous platform for backtesting and trading futures strategies"
+role: "Solo developer"
+status: "Summer 2026 – present"
+tech: ["Python", "TypeScript / Node.js", "Quantitative Finance", "Statistical Testing", "AI-Assisted Development"]
 repo_url: ""
 demo_url: ""
 cover_image: ""
@@ -13,21 +12,30 @@ order: 2
 
 ## Overview
 
-*(Draft — this is a placeholder based on what I currently know: an AI-in-finance
-project you built over the summer. Fill in the specifics — what problem you tackled
-[e.g. forecasting, risk modeling, sentiment analysis, algorithmic trading signals],
-why it was interesting, and who it was for, if anyone.)*
+Built an algorithmic trading platform for futures markets: a large Python trading
+engine paired with a statistically rigorous strategy-validation pipeline and a
+TypeScript/Node.js execution gateway for order routing.
 
 ## Approach
 
-*(Draft — describe your methodology: data sources, model/technique choices, and how
-you validated results.)*
+- Engineered a ~20,000-line Python platform to trade futures markets, backtesting 45
+  candidate strategies across tens of thousands of simulated fills.
+- Built a separate TypeScript/Node.js execution gateway to handle live order routing
+  and market connectivity.
+- Designed a statistical evaluation pipeline — pre-registered hypotheses, sequential
+  probability ratio testing (SPRT), and false-discovery-rate control — to guard
+  against overfitting and false positives across the 45-strategy search.
+- Used the pipeline to systematically retire negative-expected-value strategies
+  before risking any capital.
 
-## Technical Highlights
+## AI-Assisted Development
 
-- *(e.g. data pipeline, model architecture, backtesting framework — add your specifics)*
+Used Claude Code as part of the engineering process itself: orchestrated multi-agent
+code audits, built and used custom skills and subagent systems, and iterated on
+strategy design directly with LLM agents.
 
 ## Results
 
-*(Draft — quantify the outcome if you can: accuracy, backtested return, time saved,
-etc. Concrete numbers are what make this page stand out to reviewers.)*
+The statistical evaluation pipeline filtered the 45 candidate strategies down to a
+validated subset, systematically retiring negative-EV strategies before any were
+traded live.
