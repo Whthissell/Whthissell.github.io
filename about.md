@@ -9,13 +9,10 @@ completing my degree on an accelerated three-year track. I excel at working thro
 long, challenging, quantitative problems, and I'm always willing to get hands-on with a
 project of my own to see it through to a working system.
 
-Alongside my engineering coursework, I'm pursuing management consulting — I'm drawn to
-problems that combine technical depth with strategic decision-making, and I've been
-building projects that sit at that intersection (see [Projects](/#projects)).
-
-*(Draft — expand with more of your story: what got you into aerospace, what you're
-looking for in an internship, relevant coursework or leadership, and anything else that
-gives recruiters a fuller picture than a resume line can.)*
+Alongside my engineering coursework and projects, I've been pursuing consulting, which
+brings a different way of thinking — a more structured, strategic approach to problem
+solving that complements the technical depth of my engineering work (see
+[Projects](/#projects)).
 
 ## Interests
 
