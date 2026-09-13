@@ -1,6 +1,6 @@
 ---
 title: "Algorithmic Futures Market Trading System"
-subtitle: "A safety-first trading and research platform for Polymarket's crypto, weather, sports, and commodities markets"
+subtitle: "A safety-first trading and research platform for crypto, weather, sports, and commodities markets on a decentralized futures exchange"
 role: "Solo developer"
 status: "Summer 2026 - present"
 tech: ["Python", "FastAPI", "TypeScript / Node.js", "WebSockets", "SQLite", "Statistical Testing", "AI-Assisted Development"]
@@ -12,12 +12,12 @@ order: 2
 
 ## Overview
 
-I built two paper-trading bots against Polymarket, plus the research process that
-decides what they're allowed to run. One trades short-duration crypto markets: BTC,
-ETH, SOL, XRP, DOGE, BNB and HYPE up/down windows. The other trades weather, sports,
-and commodities markets. Everything runs in simulation. Neither bot has ever placed
-a real order, and flipping one into live mode takes a deliberate, multi-step decision
-rather than a stray click.
+I built two paper-trading bots against a decentralized futures exchange, plus the
+research process that decides what they're allowed to run. One trades
+short-duration crypto markets: BTC, ETH, SOL, XRP, DOGE, BNB and HYPE up/down
+windows. The other trades weather, sports, and commodities markets. Everything
+runs in simulation. Neither bot has ever placed a real order, and flipping one
+into live mode takes a deliberate, multi-step decision rather than a stray click.
 
 ## A Research Process, Not Just a Strategy File
 
@@ -35,7 +35,7 @@ through it or the book itself trades through your price, which gets flagged as a
 adverse fill because that's what getting run over in a live market looks like. It
 also models the exchange's minimum order size and the latency between deciding to
 trade and the exchange actually seeing that decision, including the case where a
-cancel arrives too late to help. Settlement comes from Polymarket's own market
+cancel arrives too late to help. Settlement comes from the exchange's own market
 resolution rather than a spot price feed, after an early version that used spot
 prices produced results that turned out to be fiction.
 
@@ -53,11 +53,11 @@ nothing more than a bad run of luck.
 A separate TypeScript service handles live order execution, and it has never been
 turned on. Its wallet is built without a network connection at all, so it is
 physically unable to broadcast a transaction even if the code told it to. It will
-only sign the two specific message types Polymarket's exchange uses to place an
-order and refuses everything else, including the kind of signature that could
-quietly approve someone else to spend your funds. If Polymarket ever changed how
-those messages are structured, the signer would simply stop working instead of
-signing something it no longer recognizes.
+only sign the two specific message types the exchange uses to place an order and
+refuses everything else, including the kind of signature that could quietly
+approve someone else to spend your funds. If the exchange ever changed how those
+messages are structured, the signer would simply stop working instead of signing
+something it no longer recognizes.
 
 ## Built With Claude Code as a Standing Collaborator
 
