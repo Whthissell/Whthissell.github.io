@@ -7,7 +7,7 @@ permalink: /about/
 I'm William Thissell, an Aerospace Engineering student at the University of Virginia,
 completing my degree on an accelerated three-year track. I excel at working through
 long, challenging, quantitative problems, and I'm always willing to get hands-on with a
-project of my own to see it through to a working system.
+project of my own to see it through to a final product.
 
 Alongside my engineering coursework and projects, I've been pursuing consulting, which
 brings a different way of thinking — a more structured, strategic approach to problem
