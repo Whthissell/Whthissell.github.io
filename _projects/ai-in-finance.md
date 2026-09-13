@@ -1,9 +1,9 @@
 ---
 title: "Algorithmic Futures Market Trading System"
-subtitle: "A statistically rigorous platform for backtesting and trading futures strategies"
+subtitle: "A safety-first trading and research platform for Polymarket's crypto, weather, sports, and commodities markets"
 role: "Solo developer"
-status: "Summer 2026 – present"
-tech: ["Python", "TypeScript / Node.js", "Quantitative Finance", "Statistical Testing", "AI-Assisted Development"]
+status: "Summer 2026 - present"
+tech: ["Python", "FastAPI", "TypeScript / Node.js", "WebSockets", "SQLite", "Statistical Testing", "AI-Assisted Development"]
 repo_url: ""
 demo_url: ""
 cover_image: ""
@@ -12,30 +12,62 @@ order: 2
 
 ## Overview
 
-Built an algorithmic trading platform for futures markets: a large Python trading
-engine paired with a statistically rigorous strategy-validation pipeline and a
-TypeScript/Node.js execution gateway for order routing.
+I built two paper-trading bots against Polymarket, plus the research process that
+decides what they're allowed to run. One trades short-duration crypto markets: BTC,
+ETH, SOL, XRP, DOGE, BNB and HYPE up/down windows. The other trades weather, sports,
+and commodities markets. Everything runs in simulation. Neither bot has ever placed
+a real order, and flipping one into live mode takes a deliberate, multi-step decision
+rather than a stray click.
 
-## Approach
+## A Research Process, Not Just a Strategy File
 
-- Engineered a ~20,000-line Python platform to trade futures markets, backtesting 45
-  candidate strategies across tens of thousands of simulated fills.
-- Built a separate TypeScript/Node.js execution gateway to handle live order routing
-  and market connectivity.
-- Designed a statistical evaluation pipeline — pre-registered hypotheses, sequential
-  probability ratio testing (SPRT), and false-discovery-rate control — to guard
-  against overfitting and false positives across the 45-strategy search.
-- Used the pipeline to systematically retire negative-expected-value strategies
-  before risking any capital.
+Every strategy has to earn its place. I've written up 38 numbered research studies
+that argue for enabling, killing, or tuning a given strategy, and the code just
+reflects whatever the latest study concluded. Between the two bots there are more
+than 40 registered strategies, each in its own file, with a comment block that reads
+like a decision log and cites the exact study that got it turned on or shut off.
 
-## AI-Assisted Development
+## Making the Simulation Honest
 
-Used Claude Code as part of the engineering process itself: orchestrated multi-agent
-code audits, built and used custom skills and subagent systems, and iterated on
-strategy design directly with LLM agents.
+The easiest way for a paper-trading bot to lie to you is to fill your fake orders at
+the midpoint price. This one won't fill a resting quote unless a real trade prints
+through it or the book itself trades through your price, which gets flagged as an
+adverse fill because that's what getting run over in a live market looks like. It
+also models the exchange's minimum order size and the latency between deciding to
+trade and the exchange actually seeing that decision, including the case where a
+cancel arrives too late to help. Settlement comes from Polymarket's own market
+resolution rather than a spot price feed, after an early version that used spot
+prices produced results that turned out to be fiction.
 
-## Results
+## Keeping the Statistics Honest
 
-The statistical evaluation pipeline filtered the 45 candidate strategies down to a
-validated subset, systematically retiring negative-EV strategies before any were
-traded live.
+Every enable or kill decision runs through proper statistical testing (Clopper-Pearson
+confidence bounds, sequential testing, and false-discovery control across the whole
+strategy set) instead of a glance at a P&L chart. One lesson that stuck: a longshot
+bet paying three cents needs on the order of 550 closed trades before a losing streak
+means anything, and I have documented cases of a strategy getting killed too early on
+nothing more than a bad run of luck.
+
+## The Part That Could Touch Real Money
+
+A separate TypeScript service handles live order execution, and it has never been
+turned on. Its wallet is built without a network connection at all, so it is
+physically unable to broadcast a transaction even if the code told it to. It will
+only sign the two specific message types Polymarket's exchange uses to place an
+order and refuses everything else, including the kind of signature that could
+quietly approve someone else to spend your funds. If Polymarket ever changed how
+those messages are structured, the signer would simply stop working instead of
+signing something it no longer recognizes.
+
+## Built With Claude Code as a Standing Collaborator
+
+I used Claude Code throughout, not just to write code but to run part of the
+research process itself: multi-agent audits of my own analysis, and a living rules
+document the AI checks before touching anything, covering things like never
+restarting the bots without approval and never writing to a live database. A few of
+those rules exist because breaking them once produced a conclusion I had to retract.
+
+## By the Numbers
+
+Around 15,700 lines of Python run the two bots, with another roughly 3,200 lines of
+TypeScript running the execution service and its dashboard.
