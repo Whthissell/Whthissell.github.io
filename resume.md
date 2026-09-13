@@ -4,14 +4,11 @@ title: Resume
 permalink: /resume/
 ---
 
-*(Placeholder page.)*
+<a class="btn" href="{{ "/assets/resume.pdf" | relative_url }}" target="_blank" rel="noopener">Download resume (PDF)</a>
 
-Drop your resume PDF into `assets/resume.pdf` and this page will link to it — for
-example:
-
-```markdown
-[Download my resume (PDF)]({{ "/assets/resume.pdf" | relative_url }})
-```
-
-You can also inline a summary of your experience directly on this page if you'd rather
-not make visitors download a file to see the highlights.
+<div class="resume-embed">
+  <iframe src="{{ "/assets/resume.pdf" | relative_url }}" title="William Thissell's resume"></iframe>
+  <p class="resume-embed__fallback">
+    Can't see the embed? <a href="{{ "/assets/resume.pdf" | relative_url }}" target="_blank" rel="noopener">Open the PDF directly</a>.
+  </p>
+</div>
