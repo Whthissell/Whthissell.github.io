@@ -5,9 +5,6 @@
       {% for item in site.nav %}
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endfor %}
-      {% if site.github_username and site.github_username != "your-username" %}
-        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub ↗</a>
-      {% endif %}
     </nav>
   </div>
 </header>
