@@ -1,17 +1,18 @@
 {% comment %}
   Usage: {% include project-card.html project=project %}
+  cover_image is optional. When it's blank the card falls back to a plain
+  colored panel with the project's first letter.
 {% endcomment %}
 <a class="project-card" href="{{ project.url | relative_url }}">
-  <div class="project-card__media" {% if project.cover_image %}style="background-image:url('{{ project.cover_image | relative_url }}');"{% endif %}>
-    {% unless project.cover_image %}<span class="project-card__initial">{{ project.title | slice: 0 }}</span>{% endunless %}
-  </div>
+  {% if project.cover_image and project.cover_image != "" %}
+    <div class="project-card__media" style="background-image:url('{{ project.cover_image | relative_url }}');"></div>
+  {% else %}
+    <div class="project-card__media"><span class="project-card__initial">{{ project.title | slice: 0 }}</span></div>
+  {% endif %}
   <div class="project-card__body">
+    {% if project.status %}<p class="project-card__meta">{{ project.status }}</p>{% endif %}
     <h3 class="project-card__title">{{ project.title }}</h3>
     {% if project.subtitle %}<p class="project-card__subtitle">{{ project.subtitle }}</p>{% endif %}
-    {% if project.tech %}
-      <ul class="tag-list">
-        {% for t in project.tech %}<li class="tag">{{ t }}</li>{% endfor %}
-      </ul>
-    {% endif %}
+    {% if project.role %}<p class="project-card__role">{{ project.role }}</p>{% endif %}
   </div>
 </a>
