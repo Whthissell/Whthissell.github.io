@@ -124,7 +124,7 @@ h1, h2, h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
@@ -145,7 +145,7 @@ h1, h2, h3 {
 }
 
 .project-card__media {
-  height: 140px;
+  height: 150px;
   background: linear-gradient(135deg, var(--ink) 0%, #33445a 100%);
   background-size: cover;
   background-position: center;
@@ -172,6 +172,28 @@ h1, h2, h3 {
   margin: 0 0 12px;
 }
 
+.project-card__meta {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.project-card__role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: auto 0 0;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* ---- Tags ---- */
 
 .tag-list {
@@ -194,12 +216,12 @@ h1, h2, h3 {
 
 /* ---- Generic page ---- */
 
-.page { padding: 56px 0 72px; }
+.page { padding-top: 56px; padding-bottom: 72px; }
 .page__title { font-size: 2rem; }
 
 /* ---- Project detail ---- */
 
-.project { padding: 40px 0 80px; }
+.project { padding-top: 40px; padding-bottom: 80px; }
 
 .back-link {
   display: inline-block;
@@ -243,7 +265,8 @@ h1, h2, h3 {
   font-size: 0.88rem;
 }
 .site-footer__inner {
-  padding: 28px 0 40px;
+  padding-top: 28px;
+  padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 20px;
@@ -304,3 +327,49 @@ h1, h2, h3 {
   background: var(--paper-raised);
   border-top: 1px solid var(--line);
 }
+
+/* Phones mostly can't render a PDF inside an iframe, so show a picture of
+   the page instead (it links to the real PDF). */
+.resume-image { display: none; }
+.resume-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  .resume-embed { display: none; }
+  .resume-image { display: block; }
+}
+
+/* ---- About page ---- */
+
+.facts {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 10px 24px;
+  margin: 0 0 8px;
+  padding: 20px 22px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.facts dt {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-soft);
+  padding-top: 0.25em;
+}
+.facts dd { margin: 0; }
+
+@media (max-width: 560px) {
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 12px; }
+  .facts dd:last-child { margin-bottom: 0; }
+}
+
+.page h2 { margin-top: 1.6em; }
