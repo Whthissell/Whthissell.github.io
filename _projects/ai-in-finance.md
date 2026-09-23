@@ -2,12 +2,12 @@
 title: "Algorithmic Futures Market Trading System"
 subtitle: "A safety-first trading and research platform for crypto, weather, sports, and commodities markets on a decentralized futures exchange"
 role: "Solo developer"
-status: "Summer 2026 - present"
+status: "May 2026 - September 2026"
 tech: ["Python", "FastAPI", "TypeScript / Node.js", "WebSockets", "SQLite", "Statistical Testing", "AI-Assisted Development"]
 repo_url: ""
 demo_url: ""
-cover_image: ""
-order: 2
+cover_image: "/assets/images/covers/ai-in-finance.svg"
+order: 3
 ---
 
 ## Overview
@@ -21,9 +21,10 @@ into live mode takes a deliberate, multi-step decision rather than a stray click
 
 ## A Research Process, Not Just a Strategy File
 
-Every strategy has to earn its place. I've written up 38 numbered research studies
-that argue for enabling, killing, or tuning a given strategy, and the code just
-reflects whatever the latest study concluded. Between the two bots there are more
+Every strategy has to earn its place. I've written around 70 numbered research studies
+that argue for enabling, killing, or tuning a given strategy, and from the 38th on,
+each one starts with a pre-registration written before any results come in. The code
+just reflects whatever the latest study concluded. Between the two bots there are more
 than 40 registered strategies, each in its own file, with a comment block that reads
 like a decision log and cites the exact study that got it turned on or shut off.
 
@@ -69,5 +70,8 @@ those rules exist because breaking them once produced a conclusion I had to retr
 
 ## By the Numbers
 
-Around 15,700 lines of Python run the two bots, with another roughly 3,200 lines of
-TypeScript running the execution service and its dashboard.
+About 20,000 lines of Python run the two bots plus a newer research console for
+perpetual futures on the same exchange, which ships with every strategy switched off
+and no live order path at all. Another roughly 3,200 lines of TypeScript run the
+execution service and its dashboard. Altogether the platform has evaluated 45
+strategies across tens of thousands of simulated fills.

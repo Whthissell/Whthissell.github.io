@@ -1,44 +1,39 @@
 ---
-title: "Hybrid VTOL Perching Drone"
-subtitle: "Autonomous vertical takeoff/landing drone that perches on thin structural members"
-role: "Aerodynamics & Propulsion Lead"
+title: "Autonomous Landing & Perching Hybrid Drone"
+subtitle: "A hybrid VTOL drone designed to take off vertically, fly efficiently, and land and perch on its own"
+role: "Mechanical & Aerospace Team Lead"
 team_size: "Small team of UVA engineers"
-status: "In progress"
-tech: ["Aerodynamics", "Propulsion Sizing", "Flight Controls", "Mechanism Design"]
+status: "May 2026 - present"
+tech: ["CAD", "CFD", "Aerodynamics", "Mechanism Design"]
 repo_url: ""
 demo_url: ""
-cover_image: ""
-order: 1
+cover_image: "/assets/images/covers/vtol-drone.svg"
+order: 2
 ---
 
 ## Overview
 
-A hybrid VTOL (vertical takeoff and landing) drone designed to autonomously take off
-vertically, transition to efficient forward flight, and perch onto thin structural
-members using a claw mechanism mounted on top of the airframe — built with a small team
-of fellow UVA engineers.
+A small group of UVA engineers and I are building a hybrid drone: it takes off and
+lands vertically like a multirotor, flies forward efficiently on a wing, and is meant
+to land and perch without a pilot. I lead the mechanical and aerospace side, which
+means working with the team to set the design direction and the constraints we hold
+ourselves to, and then owning the airframe that has to meet them.
 
-*(Draft — replace with 2–3 sentences on the mission/use case: why perching, what
-problem it solves, and what makes the hybrid VTOL approach the right call.)*
+## Letting the Forces Drive the Design
 
-## My Role
+Before settling on a configuration, I worked out realistic lift, drag, and thrust
+estimates for the drone and used them to make the design calls, so the choices we made
+came out of the numbers rather than out of what looked right on screen.
 
-I led the aerodynamic and propulsion sizing for the airframe: lift requirements, wing
-area sizing, and motor/propeller selection.
+## The Airframe in CAD
 
-*(Draft — add specifics: sizing methodology or tools used, key numbers — wingspan,
-weight, thrust-to-weight, endurance — and any trade studies you ran.)*
+Most of my hands-on time goes into CAD. I modeled the drone body, the airfoils, the
+tail perching mechanism, and the housing for the electronics.
+Each of those has to fit together into one aircraft that still flies well, so a change
+to one usually means revisiting the others.
 
-## Technical Highlights
+## Checking It With CFD
 
-- Lift and wing-area sizing for the transition between hover and forward flight
-- Motor and propeller selection against thrust and endurance requirements
-- Claw perching mechanism for gripping thin members after descent
-
-*(Draft — swap in the highlights that best show your contribution: CAD screenshots,
-test data, or a short flight-test clip make this section land.)*
-
-## Results / Status
-
-*(Draft — what's been validated so far, what's next, and any test data or flight
-footage worth showing.)*
+To see how the shape actually performs, I ran CFD on the airframe to get its drag
+coefficient and to find the regions where the geometry was costing the most. Those
+results point to where the next round of design changes should go.
