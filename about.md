@@ -19,7 +19,7 @@ solving.
   <dt>Education</dt>
   <dd>B.S. Aerospace Engineering, University of Virginia<br>Expected May 2028 · GPA 3.83</dd>
   <dt>Clubs</dt>
-  <dd>UVA Rocketry, Fixed Income &amp; Derivatives</dd>
+  <dd>UVA Rocketry, Fixed Income &amp; Derivatives, Catholic Hoos</dd>
   <dt>Leadership</dt>
   <dd>Eagle Scout; Senior Patrol Leader over a troop of 25 to 50 Scouts; Crew Leader on a 10-day Philmont trek; Team Captain at South Block after two promotions in four months</dd>
   <dt>Honors</dt>
