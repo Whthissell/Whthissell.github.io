@@ -1,16 +1,13 @@
 # ---------------------------------------------------------------------------
-# Site settings — update the TODOs below before your first deploy
+# Site settings
 # ---------------------------------------------------------------------------
 title: William Thissell
 tagline: "Aerospace Engineering Student @ UVA"
 description: >-
   Engineering portfolio of William Thissell, an Aerospace Engineering student
-  at the University of Virginia, showcasing hands-on projects in aerospace
-  design, autonomous systems, and applied AI/finance.
+  at the University of Virginia: rocket propulsion, a hybrid perching drone,
+  and an algorithmic trading and research platform.
 
-# TODO: set these before deploying.
-#   - If this repo is named "<your-username>.github.io": url = "https://<your-username>.github.io", baseurl = ""
-#   - If this repo has any other name (a project site):    url = "https://<your-username>.github.io", baseurl = "/<repo-name>"
 url: "https://whthissell.github.io"
 baseurl: ""
 
@@ -18,14 +15,12 @@ author:
   name: William Thissell
   email: whthissell@gmail.com
 
-# TODO: your GitHub handle (used for the header/footer GitHub link)
-github_username: Whthissell
-# TODO: optional — add if you want a LinkedIn link in the footer
-linkedin_username: ""
+# Shown in the footer and on the About page. Leave empty to hide.
+linkedin_username: "william-thissell-6a6b55318"
+
+resume_pdf: /assets/William_Thissell_Resume.pdf
 
 nav:
-  - title: Home
-    url: /
   - title: Projects
     url: /#projects
   - title: About
